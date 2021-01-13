@@ -1,0 +1,28 @@
+{
+  "name": "starbug/composer-modules-plugin",
+  "type": "composer-plugin",
+  "description": "A composer plugin for generating a module list.",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Ali Gangji",
+      "homepage": "https://github.com/cogentParadigm"
+    }
+  ],
+  "require": {
+    "composer-plugin-api": "^2.0",
+    "marcj/topsort": "^2.0"
+  },
+  "require-dev": {
+    "composer/composer": "^2.0",
+    "starbug/devel": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Starbug\\Composer\\": "src/"
+    }
+  },
+  "extra": {
+    "class": "Starbug\\Composer\\ModulesPlugin"
+  }
+}
