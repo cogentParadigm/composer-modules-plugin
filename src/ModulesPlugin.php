@@ -37,6 +37,7 @@ class ModulesPlugin implements PluginInterface, EventSubscriberInterface {
 
   public static function getSubscribedEvents() {
     return [
+      ScriptEvents::POST_INSTALL_CMD => "dumpModules",
       ScriptEvents::POST_UPDATE_CMD => "dumpModules"
     ];
   }
